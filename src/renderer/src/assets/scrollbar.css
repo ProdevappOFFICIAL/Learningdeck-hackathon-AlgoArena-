@@ -1,0 +1,42 @@
+/* Custom Animated Scrollbar */
+.animated-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #f1f1f1;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/* Webkit (Chrome, Safari) */
+.animated-scrollbar::-webkit-scrollbar {
+  width: 10px; /* Slightly wider for better visibility */
+  border-radius: 10px; /* Fully rounded */
+}
+
+.animated-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px; /* Rounded track */
+}
+
+.animated-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #9333ea);
+  border-radius: 40px; /* Fully rounded thumb */
+  transition: background 0.3s ease, height 0.2s ease-in-out;
+}
+
+/* On Hover: Slightly larger and more vibrant */
+.animated-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #2563eb, #7e22ce);
+  height: 60px; /* Enlarges the thumb when hovering */
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  transition: width 0.2s ease-out;
+  border-radius: 2px; /* Smooth edges */
+}
